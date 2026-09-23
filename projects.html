@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Gabriela Rodrigues de Morais</title>
+<meta name="description" content="Gabriela Rodrigues de Morais — software engineering portfolio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="floaters" aria-hidden="true">
+  <span class="floater diamond s1"><svg viewBox="0 0 24 24" fill="none" stroke="#262220" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5l-2 5-5 2 2-5z"/></svg></span>
+  <span class="floater h1"><svg viewBox="0 0 24 24" fill="none" stroke="#262220" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
+  <span class="floater diamond s2"><svg viewBox="0 0 24 24" fill="none" stroke="#262220" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+  <span class="floater b1"><svg viewBox="0 0 24 24" fill="none" stroke="#262220" stroke-width="1.6"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+  <span class="floater diamond s3"><svg viewBox="0 0 24 24" fill="none" stroke="#262220" stroke-width="1.6"><path d="M12 2l2.4 6.9L21 11l-6.6 2.1L12 20l-2.4-6.9L3 11l6.6-2.1z"/></svg></span>
+  <span class="floater h2"><svg viewBox="0 0 24 24" fill="none" stroke="#262220" stroke-width="1.6"><path d="M4 4l16 8-7 2-2 7z"/></svg></span>
+</div>
+
+<nav class="tape-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Gabriela Rodrigues de Morais</a>
+    <div class="nav-links">
+      <a href="about.html">about</a>
+      <a href="projects.html" class="active" aria-current="page">projects</a>
+      <a href="interests.html">interests</a>
+      <a href="journey.html">journey</a>
+      <a href="contact.html">say hi</a>
+    </div>
+  </div>
+</nav>
+
+<section id="projects" class="section page-section">
+  <div class="section-inner">
+    <h2 class="handwritten-heading center">projects i'm proud of</h2>
+    <p class="section-sub">what i've been learning at Stanford :)</p>
+
+    <div class="projects-grid">
+
+      <article class="proj-polaroid rotate-1">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-linkedlist.jpg" alt="C++ code implementing runSort and partition for linked list sorting">
+        </div>
+        <h3>Linked List Sorting</h3>
+        <p>Two classic sorting algorithms, both implemented by rewiring existing nodes' pointers instead of allocating anything new. The merge sort splits the list into its naturally-occurring sorted chunks, then repeatedly merges them back together two at a time. The quicksort picks a pivot, threads every node into one of three smaller lists (less than, equal to, greater than the pivot) by relinking pointers as it walks, recursively sorts the outer two, and splices all three back together. Same underlying skill in both: real pointer surgery on a linked structure, no shortcuts.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Pointers</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-2">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-labyrinth.jpg" alt="C++ code implementing isPathToFreedom for maze navigation">
+        </div>
+        <h3>Escape the Labyrinth</h3>
+        <p>Navigates a maze of cells linked by raw north/south/east/west pointers, following a string of moves step by step and failing the moment a move points into a wall (nullptr). Tracks which required items have been picked up along the way, succeeding only once every item is collected before the path runs out. Includes a personalized twist — the maze itself is generated from your name, so escaping it means finding your own unique way out.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Pointers</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-3">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-karplus.jpg" alt="Piano-style keyboard mapped to computer keys, used as a step sequencer">
+        </div>
+        <h3>Karplus-Strong Synthesis (MUSIC!)</h3>
+        <p>A music-making toy built in C++: click lights on a grid to add notes to a looping beat, like a simple drum machine. Every note is generated live, not pre-recorded, using a classic trick called Karplus-Strong synthesis.</p>
+        <p>Each note is a short buffer representing a sound wave. “Plucking” it fills the buffer with a sharp burst of values. Then, on every playback, each sample gets replaced with the average of itself and its neighbor, scaled down slightly — repeated over and over, that smooths and fades the burst into something that sounds like a real plucked string.</p>
+        <p>Stack one of these per note, let clicks toggle them on and off, and mix together whatever's playing each tick — a real instrument built from basic math and careful memory management.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Dynamic memory management</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-1">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-redistrict.jpg" alt="Population grid split into four equal-sum districts by horizontal and vertical cuts">
+        </div>
+        <h3>Redistricting</h3>
+        <p>Recursively splits a population grid into equal-population districts, trying horizontal and vertical cuts at every position and backtracking until every resulting region matches the target population. A backtracking take on a real redistricting problem.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Backtracking</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-2">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-t9.jpg" alt="C++ code implementing predictHelper and predict for T9 predictive text">
+        </div>
+        <h3>T9 Predictive Text</h3>
+        <p>Given a sequence of phone keypad digits, backtracks through every letter combination each digit could represent, pruning branches early against a dictionary to only pursue valid prefixes, and returns every real word the sequence could spell.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Backtracking</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-3">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-powerindex.jpg" alt="Bar chart comparing raw votes to Banzhaf power index for three voting blocs">
+        </div>
+        <h3>Power Index (Voting Blocs)</h3>
+        <p>Computes each voting bloc's power index by backtracking through every possible coalition and checking which blocs are the “critical” swing vote in each winning combination. Models a real political concept (the Banzhaf power index) used to analyze weighted voting systems like the Electoral College.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Backtracking</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-1">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-bertrand.jpg" alt="C++ code implementing countAllOrderings and countFavorableOrderings">
+        </div>
+        <h3>Bertrand's Ballot Theorem</h3>
+        <p>Computes the probability that a candidate stays ahead throughout a vote count, using brute-force recursion, then checks the result against a known closed-form formula.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Recursion</span>
+          <span class="pill mini">Programming Abstraction</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+      <article class="proj-polaroid rotate-2">
+        <div class="tape-corner"></div>
+        <div class="proj-photo">
+          <img src="assets/proj-sierpinski.jpg" alt="Sierpinski triangle fractal rendered as nested red triangles">
+        </div>
+        <h3>Sierpinski Fractal</h3>
+        <p>Draws a self-similar triangle fractal by recursively subdividing into three corner triangles at each level, in C++. Correctness verified visually through an interactive demo.</p>
+        <div class="pill-row small">
+          <span class="pill mini">Recursion</span>
+          <span class="pill mini">Programming Abstractions</span>
+          <span class="pill mini">C++</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>thanks for stopping by!</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
